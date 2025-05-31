@@ -23,3 +23,20 @@ class MinStack:
 
     def getMin(self) -> int:
         return self.min_stack[-1] if self.min_stack else None
+
+
+# 705 design hash set
+class MyHashSet:
+    # using build in set
+    def __init__(self):
+        self.hashSet = set()
+    
+    def add(self, key: int) -> None:
+        self.hashSet.add(key)
+    
+    def remove(self, key: int) -> None:
+        if key in self.hashSet:
+            self.hashSet.remove(key)
+
+    def contains(self, key: int) -> bool:
+        return key in self.hashSet
