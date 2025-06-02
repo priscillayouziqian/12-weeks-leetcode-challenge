@@ -40,3 +40,25 @@ class MyHashSet:
 
     def contains(self, key: int) -> bool:
         return key in self.hashSet
+
+
+# 706 design hash map
+class MyHashMap:
+    def __init__(self):
+        self.hashMap = {}
+
+    def put(self, key: int, value: int) -> None:
+        # inserts a (key, value) pair into hashmap
+        self.hashMap[key] = value
+
+    def get(self, key: int) -> int:
+        # search for key, return value to the key, otherwise, return -1
+        if key in self.hashMap:
+            return self.hashMap[key]
+        else:
+            return -1
+
+    def remove(self, key: int) -> None:
+        if key in self.hashMap:
+            # remove both key and value
+            del self.hashMap[key]
